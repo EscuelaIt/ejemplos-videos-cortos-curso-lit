@@ -1,0 +1,22 @@
+{
+  "name": "ejemplos-lit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "web-dev-server --node-resolve --open --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@web/dev-server": "^0.1.30"
+  },
+  "dependencies": {
+    "@dile/dile-menu-hamburger": "^1.1.0",
+    "@dile/dile-nav": "^0.1.1",
+    "@dile/dile-pages": "^1.2.0",
+    "@dile/dile-selector": "^0.1.0",
+    "lit": "^2.2.0"
+  }
+}

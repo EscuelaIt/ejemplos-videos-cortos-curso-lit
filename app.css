@@ -1,0 +1,43 @@
+body {
+    background-color: #f3f3f3;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, Tahoma, Geneva, Verdana, sans-serif;
+
+    --dile-app-drawer-content-width: 250px;
+    --dile-hamburger-color: #fff;
+    --dile-hamburger-padding-y: 0;
+
+    --dile-nav-background-color: #42a5f5;
+    --dile-hamburger-active-color: #fff;
+    --dile-app-drawer-background-color: #ffff8b;
+    --dile-app-drawer-modal-background-color: rgba(20, 20, 20, 0.3);
+    --dile-app-drawer-box-shadow: 1px 0 8px rgba(99, 99, 99, 0.3);
+    --dile-selector-selected-background-color: transparent;
+    --dile-selector-selected-font-weight: bold;
+    --dile-selector-selected-text-color: #0077c2;
+    --dile-selector-icon-color: #c9bc1f;
+    --dile-selector-selected-icon-color: #0077c2;
+
+}
+h1 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+.title {
+    display: flex;
+    align-items: center;
+}
+dile-nav img {
+    height: 1.8rem;
+    margin-right: 0.5rem;
+}
+dile-menu-hamburger dile-selector {
+    padding: 1rem 0.2rem;
+}
+dile-pages {
+    padding: 1rem;
+}
+dile-pages h2 {
+    margin-top: 0;
+}
