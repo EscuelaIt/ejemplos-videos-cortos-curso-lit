@@ -14,11 +14,26 @@ class DwMessage extends LitElement {
             margin-bottom: 0;
         }
     `
+
+    static properties = {
+        msg: { type: String },
+    }
+
+    constructor() {
+        super();
+        this.msg = 'Bienvenidos a este componente Lit!!';
+    }
     
     render() {
         return html`
-            <div>Hola Lit!!!</div>
-            <p><b>Esto también va aquí!!!</b></p>`;
+            <div>${this.msg}</div>
+            <p><b>Esto también va aquí!!!</b></p>
+            <button @click=${this.changeMsg}>Clic!!</button>
+            `;
+    }
+
+    changeMsg() {
+        this.msg = "He cambiado el mensaje";
     }
 }
 
