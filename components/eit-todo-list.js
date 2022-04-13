@@ -20,11 +20,29 @@ export class EitTodoList extends LitElement {
         `
     ];
 
+    static properties = {
+        loggedIn: { type: Boolean },
+        role: { type: String },
+    }
+
+    constructor() {
+        super();
+        this.loggedIn = false;
+        this.role = 'premium';
+    }
+
     render() {
         return html`
-            ${this.headingTemplate}
-            <eit-todo-search></eit-todo-search>
-            ${this.bodyTemplate}
+            <button @click=${this.changeLoggedIn}>cambiar logueado</button>
+            ${ this.loggedIn 
+                ? html`
+                    ${this.headingTemplate}
+                    <eit-todo-search></eit-todo-search>
+                    ${this.bodyTemplate}
+                    ${this.sayHello(this.role)}
+                ` 
+                : 'no está logueado' 
+            }  
         `;
     }
 
@@ -39,6 +57,31 @@ export class EitTodoList extends LitElement {
         <div>
             ${icons.done}
         </div>
+        `
+    }
+
+    changeLoggedIn() {
+        this.loggedIn = !this.loggedIn;
+    }
+
+    sayHello(role) {
+        switch(role) {
+            case 'administrator':
+                return 'Hola <b>Administrador</b>';
+            case 'premium':
+                return this.userPremiumTemplate;
+            default:
+                return 'Hola usuario común';
+        }
+    }
+
+    get userPremiumTemplate() {
+        return html`
+            <p>Este es el menú para el usuario premium</p>
+            <ul>
+                <li>Uno</li>
+                <li>Dos</li>
+            </ul>
         `
     }
 }
